@@ -21,12 +21,14 @@ type Props = {
 export async function generateMetadata({
   params: { id },
 }: Props): Promise<Metadata> {
+  const post = await getData(id);
   return {
-    title: id,
+    title: post.title,
   };
 }
 export default async function Post({ params: { id } }: Props) {
   const post = await getData(id);
+  console.log(post);
   return (
     <>
       <h1>{post.title}</h1>
