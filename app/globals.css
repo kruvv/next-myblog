@@ -67,3 +67,25 @@ main a:hover {
   color: var(--color-active);
   cursor: default;
 }
+
+header {
+  background-color: dimgray;
+
+  height: 80px;
+
+  &.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    a.active {
+      color: #7692f2;
+    }
+  }
+}
