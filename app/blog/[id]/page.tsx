@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import React from "react";
 
 async function getData(id: string) {
   const response = await fetch(
@@ -26,6 +27,7 @@ export async function generateMetadata({
     title: post.title,
   };
 }
+
 export default async function Post({ params: { id } }: Props) {
   const post = await getData(id);
   console.log(post);
