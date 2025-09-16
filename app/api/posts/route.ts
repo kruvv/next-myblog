@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { posts } from "./posts";
 
+export const dynamic = "force-static";
+
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const query = searchParams.get("q");

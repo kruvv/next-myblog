@@ -1,3 +1,4 @@
+import React, { Suspense } from "react";
 import { TheHeader } from "@/components/TheHeader";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -20,7 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <TheHeader />
-        <main className="container">{children}</main>
+        <Suspense fallback={<div>Загрузка...</div>}>
+          <main className="container">{children}</main>
+        </Suspense>
         <TheFooter />
       </body>
     </html>
