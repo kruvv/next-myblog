@@ -12,6 +12,7 @@ const PostSearch = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     const posts = await getPostsBySearch(search);
+    debugger
     mutate(posts);
   };
 

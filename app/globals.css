@@ -1,44 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono:
-    ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --color-bg: #2C2C32;
+  --color-active: #0f7dc6;
+}
 
-  --foreground-rgb: 0, 0, 0;
-  --color-bg: 214, 219, 220;
-  --color-active: 255, 255, 255;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
+header {
+  background-color: var(--color-bg);
+  padding: 2rem 0;
+  text-align: center;
+}
+header > a {
+  color: white;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+header > a:hover {
+  text-decoration: underline;
+}
 
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+h1 {
+  text-align: center;
+  margin-top: 0;
 }
 
 .container {
@@ -58,7 +52,6 @@ main a {
   text-decoration: none;
   color: var(--color-bg);
 }
-
 main a:hover {
   text-decoration: underline;
 }
@@ -68,24 +61,18 @@ main a:hover {
   cursor: default;
 }
 
-header {
-  background-color: dimgray;
+form {
+  display: flex;
+  justify-content: center;
+}
 
-  height: 80px;
+form button {
+  background-color: var(--color-active);
+  cursor: pointer;
+  color: white;
+  border: none;
+}
 
-  &.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-
-    a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    a.active {
-      color: #7692f2;
-    }
-  }
+input[type="search"] {
+  padding: 0.5rem 1rem;
 }

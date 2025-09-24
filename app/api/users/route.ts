@@ -1,3 +1,6 @@
+import { getAllUsers } from "@/services/getUsers";
+
 export async function GET(req: Request) {
-  return;
+  const users = getAllUsers();
+  return users;
 }
