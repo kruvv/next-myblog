@@ -12,12 +12,11 @@ const PostSearch = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     const posts = await getPostsBySearch(search);
-    debugger
     mutate(posts);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="mb-4">
       <input
         type="search"
         placeholder="search"

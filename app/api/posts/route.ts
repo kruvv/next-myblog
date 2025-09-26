@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
   const searchParams = req.nextUrl.searchParams
   const query = searchParams.get("q");
   let currentPosts = posts;
-debugger
+
   if (query) {
     currentPosts = posts.filter((post) =>
       post.title.toLowerCase().includes(query.toLowerCase()),
